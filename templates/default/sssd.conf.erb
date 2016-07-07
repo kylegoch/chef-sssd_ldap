@@ -4,7 +4,7 @@ services = nss, pam<% if node['sssd_ldap']['ldap_autofs'] %>, autofs<% end %><% 
 domains = LDAP
 
 [nss]
-filter_users = root,named,avahi,haldaemon,dbus,radiusd,news,nscd
+filter_users = <%= node['sssd_ldap']['filter_users'] %>
 
 [pam]
 
